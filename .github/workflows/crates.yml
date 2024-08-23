@@ -29,14 +29,15 @@ jobs:
       - name: cache
         uses: actions/cache@v4
         with:
-          key: cargo-${{ runner.os }}-${{ hashFiles('**/Cargo.lock') }}
+          key: cargo-${{ runner.os }}-stable-${{ hashFiles('**/Cargo.lock') }}
           path: |
             ~/.cargo/registry
             ~/.cargo/git
             target/debug
             target/release
           restore-keys: |
-            cargo-${{ runner.os }}-${{ hashFiles('**/Cargo.lock') }}
+            cargo-${{ runner.os }}-stable-${{ hashFiles('**/Cargo.lock') }}
+            cargo-${{ runner.os }}-stable-
             cargo-${{ runner.os }}-
       - run: cargo publish --all-features -v -p ${{ env.CRATE_NAME }} --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
   features:
@@ -53,7 +54,7 @@ jobs:
       - name: cache
         uses: actions/cache@v4
         with:
-          key: cargo-${{ runner.os }}-${{ hashFiles('**/Cargo.lock') }}
+          key: cargo-${{ runner.os }}-stable-${{ hashFiles('**/Cargo.lock') }}
           path: |
             ~/.cargo/registry
             ~/.cargo/git
@@ -62,9 +63,10 @@ jobs:
           restore-keys: |
             cargo-${{ runner.os }}-stable-${{ hashFiles('**/Cargo.lock') }}
             cargo-${{ runner.os }}-stable-
+            cargo-${{ runner.os }}-
       - run: cargo publish --all-features -v -p ${{ env.CRATE_NAME }} --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
   publish:
-    name: Publish (${{ github.event.repository.name }})
+    name: Publish SDK
     needs: [ core, features ]
     runs-on: ubuntu-latest
     steps:
@@ -78,7 +80,7 @@ jobs:
             ~/.cargo/git
             target/release
           restore-keys: |
-            cargo-${{ runner.os }}-${{ hashFiles('**/Cargo.lock') }}
+            cargo-${{ runner.os }}-stable-${{ hashFiles('**/Cargo.lock') }}
+            cargo-${{ runner.os }}-stable-
             cargo-${{ runner.os }}-
-            cargo-
       - run: cargo publish --all-features -v -p ${{ github.event.repository.name }} --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
