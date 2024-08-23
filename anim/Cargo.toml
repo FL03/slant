@@ -23,7 +23,7 @@ full = [
     "serde",
 ]
 
-# [FF] Dependencies
+# ********* [FF] Dependencies *********
 alloc = [
     "serde?/alloc",
     "slant-core/std",

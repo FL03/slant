@@ -1,11 +1,11 @@
 # slant
 
-[![crates.io](https://img.shields.io/crates/v/slant.svg)](https://crates.io/crates/slant)
-[![docs.rs](https://docs.rs/slant/badge.svg)](https://docs.rs/slant)
+[![license](https://img.shields.io/crates/l/rstm.svg)](https://crates.io/crates/rstm)
 [![clippy](https://github.com/FL03/slant/actions/workflows/clippy.yml/badge.svg)](https://github.com/FL03/slant/actions/workflows/clippy.yml)
 [![rust](https://github.com/FL03/slant/actions/workflows/rust.yml/badge.svg)](https://github.com/FL03/slant/actions/workflows/rust.yml)
 
-[![license](https://img.shields.io/crates/l/slant.svg)](https://choosealicense.com/licenses/apache-2.0/)
+[![crates.io](https://img.shields.io/crates/v/slant.svg)](https://crates.io/crates/slant)
+[![docs.rs](https://docs.rs/slant/badge.svg)](https://docs.rs/slant)
 
 ***
 

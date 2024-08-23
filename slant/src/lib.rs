@@ -16,6 +16,7 @@ pub use slant_core::*;
 #[cfg(feature = "anim")]
 pub use slant_anim as anim;
 
+#[allow(unused_imports)]
 pub mod prelude {
     pub use slant_core::prelude::*;
     #[cfg(feature = "anim")]
