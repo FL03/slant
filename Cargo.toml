@@ -23,15 +23,15 @@ thiserror = "1"
 
 [workspace.package]
 authors = ["FL03 <jo3mccain@icloud.com>",]
-categories = [ ]
+categories = [ "mathematics", ]
 description = "slant is a mathematical sandbox focused on interactive visualizations and animations."
 edition = "2021"
 homepage = "https://github.com/FL03/slant/wiki"
-keywords = [ ]
+keywords = [ "animation", "math"]
 license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/FL03/slant.git"
-version = "0.0.0"
+version = "0.0.1"
 
 [profile.dev]
 opt-level = 0

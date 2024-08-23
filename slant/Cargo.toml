@@ -65,13 +65,14 @@ test = true
 
 [dependencies.slant-anim]
 default-features = false
-path = "../core"
-version = "0.0.0"
+optional = true
+path = "../anim"
+version = "0.0.1"
 
 [dependencies.slant-core]
 default-features = false
 path = "../core"
-version = "0.0.0"
+version = "0.0.1"
 
 [dev-dependencies]
 

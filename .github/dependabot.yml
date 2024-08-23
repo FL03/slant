@@ -13,3 +13,11 @@ updates:
     directory: /slant
     schedule:
       interval: weekly
+  - package-ecosystem: cargo
+    directory: /anim
+    schedule:
+      interval: weekly
+  - package-ecosystem: cargo
+    directory: /core
+    schedule:
+      interval: weekly

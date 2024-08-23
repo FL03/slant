@@ -23,7 +23,7 @@ full = [
     "serde",
 ]
 
-# [FF] Dependencies
+# ********* [FF] Dependencies *********
 alloc = [
     "num/alloc",
     "serde?/alloc",
@@ -56,9 +56,6 @@ test = true
 
 [build-dependencies]
 
-[dev-dependencies]
-lazy_static = "1"
-
 [dependencies.num]
 default-features = false
 version = "0.4"
@@ -68,6 +65,14 @@ default-features = false
 features = ["derive"]
 optional = true
 version = "1"
+
+[dependencies.strum]
+default-features = false
+features = ["derive"]
+version = "0.26"
+
+[dev-dependencies]
+lazy_static.workspace = true
 
 [package.metadata.docs.rs]
 all-features = true

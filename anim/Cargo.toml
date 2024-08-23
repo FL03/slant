@@ -60,11 +60,16 @@ test = true
 
 [build-dependencies]
 
+[dependencies.serde]
+default-features = false
+features = ["derive"]
+optional = true
+version = "1"
+
 [dependencies.slant-core]
 default-features = false
 path = "../core"
-version = "0.0.0"
-
+version = "0.0.1"
 
 [dev-dependencies]
 lazy_static.workspace = true
