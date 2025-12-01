@@ -32,7 +32,7 @@ jobs:
         toolchain: [ stable, nightly ]
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: setup (rustup)
         run: |
           rustup default ${{ matrix.toolchain }}
